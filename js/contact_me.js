@@ -37,7 +37,7 @@ $(function() {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>Sua Mensagem foi enviada com sucesso! <br> Aguarde retorno da WebCon</strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
