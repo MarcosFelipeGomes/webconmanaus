@@ -73,7 +73,7 @@
                         <a href="#contact">Contato</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#condominio">Condomínio</a>
+                        <a data-toggle="modal" href=".bs-example-modal-lg">Condomínio</a>
                     </li>
                 </ul>
             </div>
@@ -87,7 +87,7 @@
         <div class="container" id="maincontent" tabindex="-1" style="font-family: AMERSN__">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/logo_webcon.png" alt="">
+                    <img class="img-responsive" src="img/logo.png" alt="">
                     <div class="intro-text">
                         <h1 class="name" style="font-family: AMERSN__">Seja Bem-Vindo.</h1>
                         <hr class="star-light">
@@ -1107,6 +1107,147 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!--LOGIN BR COND-->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title" id="myModalLabel" style="font-family: AMERSN__">Acesso ao BrCondomínio</h5>
+              </div>
+        <div>
+            <table  id="bordaLogin" align="center">
+                <tr>
+                    <td width="40%" ><img src="img/admin.png"  width="90px" height="80px"></td>
+                    <td width="60%" ><font style="color:#006186; font-family: AMERSN__, sans-serif;"> Administradora:</font>
+            <style type="text/css">
+                .bt
+                {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    color: #FFFFFF;
+                    background-color: #006186;
+                    height: 19px;
+                    border: 1px solid #FFFFFF;
+                            border-radius: 4px;
+                    font-weight: bold;
+                }
+
+                .campo
+                {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    color: #FFFFFF;
+                    background-color: #006186;
+                    height: 15px;
+                    border: 1px solid #FFFFFF;
+                            border-radius: 4px;
+                    font-weight: bold;
+                }
+            </style>
+            <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+                function logaradm()
+                {
+                    if (document.formadm.loginadm.value.length < 3)
+                    {
+                        alert('É obrigatório informar um login válido.');
+                        document.formadm.loginadm.focus();
+                        return;
+                    }
+                    destino = "https://www.brcondominio.com.br/br1/index.cfm?loginname=" + document.formadm.loginadm.value;
+                    dleft = 0;
+                    dtop = 0;
+                    wwidth = screen.availWidth;
+                    wheight = screen.availHeight;
+                    var attr = "left=" + dleft + ",top=" + dtop + ",height=" + wheight + ",width=" + wwidth + ",scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,titlebar=no";
+                    janela = window.open(destino, '_blank', attr)
+                    if(janela == null){parent.document.location.href = destino;return;}
+                    setTimeout('if(janela != undefined){if(!janela.closed){}else{parent.document.location.href = "' + destino + '";}}', 2 * 1000);
+                }
+            </SCRIPT>
+
+                <table cellspacing="0" cellpadding="0">
+                <form name="formadm" method="post" action="javascript:logaradm();">
+                    <tr>
+                        <td valign="middle"><font style="font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #006186;font-weight: bold;">LOGIN:</font></td>
+                        <td>&nbsp;</td>
+                        <td valign="middle"><input type="text" class="campo" name="loginadm"></td>
+                        <td>&nbsp;</td>
+                        <td valign="middle"><input type="submit" value="Ok" class="bt"></td>
+                    </tr>
+                </form>
+                </table>
+                </td>
+                </tr>
+            </table>
+            <table id="bordaLogin" align="center">
+                <tr>
+                    <td width="40%"><img src="img/cond.png"  width="90px" height="80px"></td>
+                    <td><font style="color:#006186; font-family: AMERSN__, sans-serif;"> Condômino:</font>
+                <style type="text/css">
+                .bt
+                {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    color: #FFFFFF;
+                    background-color: #006186;
+                    height: 19px;
+                    border: 1px solid #FFFFFF;
+                            border-radius: 4px;
+                    font-weight: bold;
+                }
+
+                .campo
+                {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    color: #FFFFFF;
+                    background-color: #006186;
+                    height: 15px;
+                    border: 1px solid #FFFFFF;
+                            border-radius: 4px;
+                    font-weight: bold;
+                }
+            </style>
+            <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+                function logar()
+                {
+                    if (document.forml.login.value.length < 3)
+                    {
+                        alert('É obrigatório informar um login válido.');
+                        document.forml.login.focus();
+                        return;
+                    }
+                    destino = "https://www.brcondominio.com.br/br1/consulta/index.cfm?loginname=" + document.forml.login.value;
+                    dleft = 0;
+                    dtop = 0;
+                    wwidth = screen.availWidth;
+                    wheight = screen.availHeight;
+                    var attr = "left=" + dleft + ",top=" + dtop + ",height=" + wheight + ",width=" + wwidth + ",scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,titlebar=no";
+                    janela = window.open(destino, '_blank', attr)
+                    if(janela == null){parent.document.location.href = destino;return;}
+                    setTimeout('if(janela != undefined){if(!janela.closed){}else{parent.document.location.href = "' + destino + '";}}', 2 * 1000);
+                }
+            </SCRIPT>
+
+                <table cellspacing="0" cellpadding="0">
+                <form name="forml" method="post" action="javascript:logar();">
+                    <tr>
+                        <td valign="middle"><font style="font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #006186;font-weight: bold;">LOGIN:</font></td>
+                        <td>&nbsp;</td>
+                        <td valign="middle"><input type="text" class="campo" name="login"></td>
+                        <td>&nbsp;</td>
+                        <td valign="middle"><input type="submit" value="Ok" class="bt"></td>
+                    </tr>
+                </form>
+                </table>
+            </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+      </div>
     </div>
 
     <!-- jQuery -->
